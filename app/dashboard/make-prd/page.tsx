@@ -1,4 +1,4 @@
-import TrainModelZone from "@/components/TrainModelZone";
+import ProductRequirementsForm from "@/components/ProductRequirementsForm";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,15 +9,14 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
-
-export default async function Index() {
+export default function MakePrdPage() {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div
         id="train-model-container"
         className="flex flex-1 flex-col gap-2 px-2"
       >
-        <Link href="/overview" className="text-sm w-fit">
+        <Link href="/dashboard" className="text-sm w-fit">
           <Button variant={"outline"}>
             <FaArrowLeft className="mr-2" />
             Go Back
@@ -25,13 +24,13 @@ export default async function Index() {
         </Link>
         <Card>
           <CardHeader>
-            <CardTitle>Train Model</CardTitle>
+            <CardTitle>Fill This PRD Form</CardTitle>
             <CardDescription>
-              Choose a name, type, and upload some photos to get started.
+              Fill this form to create a new PRD.
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
-            <TrainModelZone />
+            <ProductRequirementsForm />
           </CardContent>
         </Card>
       </div>

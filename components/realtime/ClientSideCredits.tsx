@@ -14,10 +14,7 @@ type ClientSideCreditsProps = {
 export default function ClientSideCredits({
   creditsRow,
 }: ClientSideCreditsProps) {
-
-  if (!creditsRow) return (
-    <p>Credits: 0</p>
-  )
+  if (!creditsRow) return <p>Credits: 0</p>;
 
   const supabase = createClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
@@ -44,7 +41,5 @@ export default function ClientSideCredits({
 
   if (!credits) return null;
 
-  return (
-    <p>Credits: {credits.credits}</p>
-  );
+  return <p>Credits: {credits.credits}</p>;
 }
