@@ -38,7 +38,7 @@ export default async function Navbar() {
     <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between">
       <div className="flex gap-2 h-full">
         <Link href="/">
-          <h2 className="font-bold">PRD Maker</h2>
+          <h2 className="font-bold">Expense Tracker</h2>
         </Link>
       </div>
       {user && (
