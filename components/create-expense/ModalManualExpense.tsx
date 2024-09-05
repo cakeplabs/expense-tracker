@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useState } from "react";
 
 interface ExpenseFormData {
@@ -35,7 +36,10 @@ export const ExpenseModal: React.FC<{
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg p-6 w-full max-w-md">
-        <h2 className="text-xl font-semibold mb-4">Manual Input</h2>
+        <div className="w-full flex gap-2 justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold">Manual Input</h2>
+          <X className="w-6 h-6 cursor-pointer" onClick={onClose} />
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label
@@ -50,7 +54,7 @@ export const ExpenseModal: React.FC<{
               name="nominal"
               value={formData.nominal}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-3"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-none focus:ring-0 p-3"
               required
             />
           </div>
@@ -88,17 +92,10 @@ export const ExpenseModal: React.FC<{
               required
             ></textarea>
           </div>
-          <div className="flex justify-end">
-            <button
-              type="button"
-              onClick={onClose}
-              className="mr-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-            >
-              Cancel
-            </button>
+          <div className="flex justify-start">
             <button
               type="submit"
-              className="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="px-4 py-2 border-2 text-sm font-medium rounded-sm text-gray-600 border-gray-600 hover:opacity-80 focus:outline-none"
             >
               Create expense
             </button>

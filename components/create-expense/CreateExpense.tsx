@@ -14,7 +14,7 @@ interface Expense {
 }
 
 const CreateExpense: React.FC = () => {
-  const [expenses, setExpenses] = useState<Expense[]>([
+  const dummyData = [
     {
       id: 1,
       date: "20/08/2024",
@@ -71,7 +71,8 @@ const CreateExpense: React.FC = () => {
       type: "Daily Expense",
       amount: 20000,
     },
-  ]);
+  ];
+  const [expenses, setExpenses] = useState<Expense[]>([]);
   const [image, setImage] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -110,7 +111,7 @@ const CreateExpense: React.FC = () => {
               />
             ) : (
               <p className="text-gray-500">
-                {isDragActive ? "Drop the image here" : "UPLOAD IMAGE"}
+                {isDragActive ? "Drop the image here" : "Upload Image"}
               </p>
             )}
           </div>
@@ -120,6 +121,12 @@ const CreateExpense: React.FC = () => {
         <div className="bg-white p-4 rounded-lg shadow max-h-[600px] overflow-y-auto">
           <h2 className="text-xl font-semibold mb-4">List Expense</h2>
           <div className="space-y-2">
+            {expenses.length === 0 && (
+              <div className="flex justify-center h-20 items-center bg-gray-200/50 p-2 rounded">
+                No data
+              </div>
+            )}
+
             {expenses.map((expense) => (
               <div
                 key={expense.id}

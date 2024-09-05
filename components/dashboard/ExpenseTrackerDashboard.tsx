@@ -80,7 +80,7 @@ const ExpenseTrackerDashboard = () => {
           <div className="min-w-[200px] w-full sm:w-fit flex justify-end">
             <Link
               href={"/dashboard/create-expense"}
-              className="w-full text-center rounded-md shadow-md px-4 py-3 border-2 border-gray-600 font-semibold"
+              className="w-full text-center rounded-sm shadow-md px-4 py-2 border-2 border-gray-600 font-medium"
             >
               Track Expense
             </Link>
