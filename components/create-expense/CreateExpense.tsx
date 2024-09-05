@@ -98,7 +98,7 @@ const CreateExpense: React.FC = () => {
         <div className="bg-white p-4 rounded-lg shadow">
           <div
             {...getRootProps()}
-            className={`border-2 border-dashed rounded-lg p-4 text-center cursor-pointer h-64 flex items-center justify-center ${
+            className={`border-2 border-dashed rounded-lg p-4 text-center cursor-pointer h-96 flex items-center justify-center ${
               isDragActive ? "border-blue-500 bg-blue-50" : "border-gray-300"
             }`}
           >
@@ -118,7 +118,7 @@ const CreateExpense: React.FC = () => {
         </div>
 
         {/* Expense List Section */}
-        <div className="bg-white p-4 rounded-lg shadow max-h-[600px] overflow-y-auto">
+        <div className="bg-white p-4 rounded-lg shadow md:max-h-[416px] overflow-y-auto">
           <h2 className="text-xl font-semibold mb-4">List Expense</h2>
           <div className="space-y-2">
             {expenses.length === 0 && (
