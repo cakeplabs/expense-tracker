@@ -6,8 +6,9 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "Headshots AI",
-  description: "Generate awesome headshots in minutes using AI",
+  title: "Expense Tracker",
+  description:
+    "Effortlessly manage your finances with our powerful expense tracker",
 };
 
 export default function RootLayout({ children }: any) {
@@ -23,9 +24,7 @@ export default function RootLayout({ children }: any) {
             <Navbar />
           </Suspense>
         </section>
-        <main className="flex flex-1 flex-col items-center py-16">
-          {children}
-        </main>
+        <main className="flex flex-1 flex-col items-center">{children}</main>
         <Footer />
         <Toaster />
         <Analytics />

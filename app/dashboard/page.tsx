@@ -24,7 +24,7 @@ export default async function DashboardPage() {
     .eq("user_id", user.id);
 
   return (
-    <div className="container mx-auto px-0">
+    <div className="container mx-auto px-0 py-16">
       {/* <ClientSidePrdList projectModels={projects ?? []} /> */}
       <ExpenseTrackerDashboard />
     </div>

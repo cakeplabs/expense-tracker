@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function SupabaseLogo() {
+export default function SupabaseLogo({ className }: { className?: string }) {
   return (
     <svg
       aria-label="Supabase logo"
@@ -100,5 +100,5 @@ export default function SupabaseLogo() {
         </clipPath>
       </defs>
     </svg>
-  )
+  );
 }
