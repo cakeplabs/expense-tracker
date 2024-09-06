@@ -7,7 +7,7 @@ const ExpenseTrackerHero: React.FC = () => {
   return (
     <div className=" text-white w-full bg-gradient-to-r from-purple-600 to-indigo-600">
       <div className="container mx-auto px-4 py-16 sm:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">
               Smart Expense Tracking Made Simple
@@ -31,7 +31,7 @@ const ExpenseTrackerHero: React.FC = () => {
               </button> */}
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <FeatureCard
               icon={<DollarSign size={40} />}
               title="Manual Input"
@@ -48,7 +48,7 @@ const ExpenseTrackerHero: React.FC = () => {
               description="View your expenses in clear tables"
             />
             <FeatureCard
-              icon={<SupabaseLogo />}
+              icon={<SupabaseLogo className="h-10" />}
               title="Supabase Powered"
               description="Secure, fast, and reliable data storage"
             />
